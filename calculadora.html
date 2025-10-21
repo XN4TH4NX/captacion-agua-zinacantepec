@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculadora de Captación Pluvial — Zinacantepec</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark"></div>
+        <div>
+          <div class="brand-title">Agua para Zinacantepec</div>
+          <div class="brand-sub">Calculadora pluvial</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+      </nav>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main class="container section">
+    <h1>Calculadora de captación de agua</h1>
+    <p class="muted">Completa los campos para estimar cuánta agua puedes recolectar al año.</p>
+
+    <div class="card">
+      <form id="calc-form">
+        <label>Área de techo (m²)
+          <input id="area" type="number" value="100" min="10" step="1" required>
+        </label>
+
+        <label>Material del techo
+          <select id="material">
+            <option value="0.95">Lámina galvanizada (0.95)</option>
+            <option value="0.9">Teja (0.90)</option>
+            <option value="0.8">Concreto (0.80)</option>
+          </select>
+        </label>
+
+        <label>Precipitación anual (mm)
+          <input id="lluvia" type="number" value="800" min="100" step="10" required>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Calcular</button>
+          <button type="reset" class="btn btn-ghost">Limpiar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="resultado" class="card" style="display:none;"></div>
+
+    <div class="card" id="grafica-container" style="display:none;">
+      <canvas id="grafica"></canvas>
+    </div>
+
+    <div class="card" id="educacion">
+      <h2>Consejos y Mantenimiento</h2>
+      <ul>
+        <li>Limpia canaletas y filtros cada 2 meses.</li>
+        <li>No recolectes las primeras lluvias fuertes (contienen residuos).</li>
+        <li>Desinfecta el tinaco cada 6 meses.</li>
+        <li>Usa mallas para evitar hojas y basura.</li>
+        <li>Aplica pintura impermeable al techo cada 2 años.</li>
+      </ul>
+
+      <h2>Preguntas Frecuentes</h2>
+      <details>
+        <summary>¿Puedo usar el agua captada para beber?</summary>
+        <p>Sí, pero debe pasar por un sistema de filtración y purificación adecuado.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta instalar un sistema?</summary>
+        <p>El costo varía entre $3,000 y $10,000 MXN dependiendo del tamaño y materiales.</p>
+      </details>
+      <details>
+        <summary>¿Necesito permiso del municipio?</summary>
+        <p>No, pero se recomienda notificar a las autoridades locales para apoyo técnico</p>
+      </details>
+
+      <h2>Guía Básica de Instalación</h2>
+      <p>Instala canaletas en los bordes del techo.<br>
+         Conecta las canaletas a un filtro de hojas<br>
+         Usa un tubo para conducir el agua al tinaco o cisterna<br>
+         Asegura que el sistema esté sellado y libre de fugas<br>
+         Coloca una tapa para evitar la entrada de insectos</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <strong>Abimael Colin - Alejandro Matias</strong>
+      <p>Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="js/calculadora.js"></script>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+  </script>
+</body>
+</html>

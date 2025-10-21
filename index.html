@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agua para Zinacantepec — Captación y Conservación</title>
+  <meta name="description" content="Proyecto educativo sobre captación y conservación de agua en Zinacantepec.">
+  <meta name="keywords" content="agua, captación pluvial, Zinacantepec, sustentabilidad">
+  <meta name="author" content="Abimael Colin, Alejandro Matias">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#inicio"><div class="logo-mark" aria-label="Inicio"></div></a>
+        <div>
+          <div class="brand-title">Agua para Zinacantepec</div>
+          <div class="brand-sub">Captación y conservación comunitaria</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="calculadora.html">Calculadora</a>
+      </nav>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Captación de agua pluvial para una comunidad más resiliente</h1>
+          <p>Aprende cómo aprovechar la lluvia, calcula tu ahorro y conoce proyectos exitosos en Zinacantepec.</p>
+          <div class="hero-actions">
+            <a href="calculadora.html" class="btn">Usar calculadora</a>
+            <a href="#soluciones" class="btn btn-ghost">Ver soluciones</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="img/gota.png" alt="Gota de agua animada" class="gota-hero" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Mapa interactivo — Zonas de Zinacantepec</h2>
+      <p class="muted">Haz clic en las zonas para conocer su nivel de escasez.</p>
+      <div id="map" aria-label="Mapa interactivo de zonas de captación"></div>
+    </section>
+
+    <section id="soluciones" class="section container">
+      <h2>Soluciones recomendadas</h2>
+      <p class="muted">Opciones sostenibles para aprovechar la lluvia en casa y en comunidad.</p>
+
+      <div class="soluciones-grid">
+        <div class="sol-card sol-azul">
+          <img src="img/solucion1.png" width="150" alt="Sistema doméstico de captación" loading="lazy">
+          <h3>Sistema doméstico</h3>
+          <p>Instala canaletas, filtros y un tinaco para recolectar agua de lluvia y usarla en jardín, limpieza y descarga de baño.</p>
+        </div>
+        <div class="sol-card sol-verde">
+          <img src="img/solucion2.png" width="150" alt="Sistema comunitario" loading="lazy">
+          <h3>Sistema comunitario</h3>
+          <p>Implementa sistemas de captación en escuelas, centros comunitarios y edificios municipales para riego o limpieza pública.</p>
+        </div>
+        <div class="sol-card sol-amarillo">
+          <img src="img/solucion3.png" width="150" alt="Recarga de mantos acuíferos" loading="lazy">
+          <h3>Recarga de mantos</h3>
+          <p>Crea zanjas de infiltración y pozos pluviales que permitan que el agua regrese al subsuelo, fortaleciendo los acuíferos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contacto-section">
+      <div class="container contacto-grid">
+        <div class="contacto-info">
+          <h2>Contáctanos</h2>
+          <p>Si deseas más información o asesoría sobre sistemas de captación de agua, envíanos un mensaje.</p>
+          <ul class="contact-list">
+            <li><strong>Ubicación:</strong> Zinacantepec, Estado de México</li>
+            <li><strong>Correo:</strong> contactoagua@gmail.com</li>
+            <li><strong>Teléfono:</strong> +52 722 123 4567</li>
+          </ul>
+        </div>
+
+        <div class="contacto-form card">
+          <form id="contact-form" aria-label="Formulario de contacto">
+            <label>Nombre<input type="text" id="nombre" required></label>
+            <label>Correo<input type="email" id="email" required></label>
+            <label>Mensaje<textarea id="mensaje" rows="4" required></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn">Enviar mensaje</button>
+            </div>
+            <div id="contact-msg" class="muted"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <strong>Abimael Colin - Alejandro Matias</strong> | Todos los derechos reservados
+    </div>
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/mapa.js"></script>
+  <script src="js/formulario.js"></script>
+  <script>
+    const toggle=document.querySelector('.menu-toggle');
+    const nav=document.querySelector('.nav');
+    toggle.addEventListener('click',()=>nav.classList.toggle('active'));
+  </script>
+</body>
+</html>

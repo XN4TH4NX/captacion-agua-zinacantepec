@@ -1,0 +1,163 @@
+
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 160px;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  form label {
+    font-size: 15px;
+  }
+
+  input, select, textarea, button {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+ 
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 20;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text);
+  }
+
+ 
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+ 
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+ 
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+ 
+  .hero {
+    margin: 15px;
+    text-align: center;
+  }
+
+  .hero-img {
+    text-align: center;
+  }
+
+  .gota-hero {
+    width: 100px;
+  }
+
+ 
+  .section {
+    padding: 25px 0;
+  }
+
+ 
+  .soluciones-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sol-card {
+    width: 90%;
+  }
+
+ 
+  .contacto-grid {
+    flex-direction: column;
+  }
+
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form label {
+    font-size: 15px;
+  }
+
+  input, select {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #resultado {
+    margin-top: 20px;
+  }
+
+ 
+  .card {
+    padding: 15px;
+    margin: 10px;
+  }
+
+ 
+  .site-footer {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+details {
+  background: #f8fbfd;
+  border: 1px solid #cde3f0;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+details summary {
+  font-weight: 600;
+  color: #007acc;
+}
+details[open] {
+  background: #e9f7fb;
+}
+
+#grafica-container {
+  text-align: center;
+  padding: 20px;
+}
