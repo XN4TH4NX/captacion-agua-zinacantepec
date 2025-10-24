@@ -11,9 +11,9 @@ Estructura	HTML5
 Estilos	CSS3 / Responsive Design / Animaciones básicas
 Interactividad	JavaScript (DOM, validaciones, Leaflet API)
 Mapa	Leaflet.js + OpenStreetMap
-Tipografía	Google Fonts — Poppins
 Estructura del Proyecto
 /proyecto-agua-zinacantepec
+
 ├── index.html              # Página principal (mapa + soluciones)
 ├── calculadora.html        # Calculadora de captación pluvial
 ├── proyectos.html          # Página de proyectos o ejemplos
